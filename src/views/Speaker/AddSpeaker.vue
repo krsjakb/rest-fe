@@ -29,7 +29,7 @@ export default {
         .post("https://localhost:5001/api/Speakers", params)
         .then(() => {
           alert("success");
-          this.$router.push("Speakers");
+          this.$router.push("Speaker");
         })
         .catch(() => {
           alert("failed");

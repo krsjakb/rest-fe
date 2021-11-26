@@ -48,7 +48,7 @@ export default {
          params)
         .then(() => {
           alert("success");
-          this.$router.push("/Speakers");
+          this.$router.push("/Speaker");
         })
         .catch(() => {
           alert("failed");
