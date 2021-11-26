@@ -3,8 +3,11 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import CarBrand from "../views/CarBrand.vue";
-import AddCarBrand from "../views/AddCarBrand.vue"
-import EditBrand from "../views/EditBrand.vue"
+import AddCarBrand from "../views/AddCarBrand.vue";
+import EditBrand from "../views/EditBrand.vue";
+import Hammer from "../views/Hammer/Hammer.vue";
+import AddHammer from "../views/Hammer/AddHammer.vue";
+import EditHammer from "../views/Hammer/EditHammer.vue";
 
 Vue.use(VueRouter);
 
@@ -25,6 +28,11 @@ const routes = [
     component: CarBrand
   },
   {
+    path: "/hammers",
+    name: "Hammers",
+    component: Hammer
+  },
+  {
     path: "/addCarBrand",
     name: "AddCarBrand",
     component: AddCarBrand
@@ -33,6 +41,16 @@ const routes = [
     path: "/editBrand/:id",
     name: "EditBrand",
     component: EditBrand
+  },
+  {
+    path: "/editHammer/:id",
+    name: "EditHammer",
+    component: EditHammer
+  },
+  {
+    path: "/addHammer",
+    name: "AddHammer",
+    component: AddHammer
   }
 ];
 
