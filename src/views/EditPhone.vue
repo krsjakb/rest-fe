@@ -39,7 +39,7 @@ export default {
           alert("failed");
         });
     },
-    saveBrand() {
+    savePhone() {
       let params = {
         id: this.id,
         price: this.price,
