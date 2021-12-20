@@ -6,6 +6,9 @@ import CarBrand from "../views/CarBrand.vue";
 import AddCarBrand from "../views/AddCarBrand.vue"
 import EditBrand from "../views/EditBrand.vue"
 
+import MonitorBrand from "../views/MonitorBrand.vue"
+import AddMonitorBrand from "../views/AddMonitorBrand.vue"
+import EditMonitorBrand from "../views/EditMonitorBrand.vue"
 Vue.use(VueRouter);
 
 const routes = [
@@ -33,6 +36,22 @@ const routes = [
     path: "/editBrand/:id",
     name: "EditBrand",
     component: EditBrand
+  },
+
+  {
+    path: "/monitorBrand",
+    name: "MonitorBrand",
+    component: MonitorBrand
+  },
+  {
+    path: "/addMonitorBrand",
+    name: "AddMonitorBrand",
+    component: AddMonitorBrand
+  },
+  {
+    path: "/editMonitorBrand/:id",
+    name: "EditMonitorBrand",
+    component: EditMonitorBrand
   }
 ];
 
