@@ -3,8 +3,11 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import CarBrand from "../views/CarBrand.vue";
-import AddCarBrand from "../views/AddCarBrand.vue"
-import EditBrand from "../views/EditBrand.vue"
+import AddCarBrand from "../views/AddCarBrand.vue";
+import EditBrand from "../views/EditBrand.vue";
+import EditPhone from "../views/EditPhone.vue";
+import AddPhone from "../views/AddPhone.vue";
+import Phone from "../views/Phone.vue";
 
 Vue.use(VueRouter);
 
@@ -33,6 +36,21 @@ const routes = [
     path: "/editBrand/:id",
     name: "EditBrand",
     component: EditBrand
+  },
+  {
+    path: "/editPhone/:id",
+    name: "EditPhone",
+    component: EditPhone
+  },
+  {
+    path: "/addPhone",
+    name: "AddBrand",
+    component: AddPhone
+  },
+  {
+    path: "/phones",
+    name: "Phones",
+    component: Phone
   }
 ];
 
