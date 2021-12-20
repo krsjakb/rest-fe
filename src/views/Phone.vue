@@ -36,7 +36,7 @@
           this.phones = response.data;
         });
     },
-    editPhones(id) {
+    editPhone(id) {
       this.$router.push("editPhone/" + id)
     },
     deletePhone(id) {
