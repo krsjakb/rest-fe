@@ -1,6 +1,6 @@
 <template>
     <div>
-        <a href="addPhone">New phone</a>
+    <a href="addPhone">New phone</a>
     <b-list-group v-for="phone in phones" :key="phone.id">
       <b-list-group-item>
         Price: {{ phone.price }}

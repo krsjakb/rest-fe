@@ -4,7 +4,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> | 
       <router-link to="/carBrands">CarBrands</router-link> |
-      <router-link to="/phones">Phones</router-link>
+      <router-link to="/phones">Phones</router-link> |
+      <router-link to="/usbconnectors">USBConnectors</router-link>
     </div>
     <router-view />
   </div>

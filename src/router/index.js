@@ -8,6 +8,9 @@ import EditBrand from "../views/EditBrand.vue";
 import EditPhone from "../views/EditPhone.vue";
 import AddPhone from "../views/AddPhone.vue";
 import Phone from "../views/Phone.vue";
+import USBConnector from "../views/USBConnector.vue";
+import AddUSBConnector from "../views/AddUSBConnector.vue";
+import EditUSBConnector from "../views/EditUSBConnector.vue";
 
 Vue.use(VueRouter);
 
@@ -51,6 +54,21 @@ const routes = [
     path: "/phones",
     name: "Phones",
     component: Phone
+  },
+  {
+    path: "/usbconnectors",
+    name: "USBConnector",
+    component: USBConnector
+  },
+  {
+    path: "/addusbconnector",
+    name: "AddUSBConnector",
+    component: AddUSBConnector
+  },
+  {
+    path: "/editusbconnector",
+    name: "EditUSBConnector",
+    component: EditUSBConnector
   }
 ];
 
