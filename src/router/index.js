@@ -5,6 +5,9 @@ import About from "../views/About.vue";
 import CarBrand from "../views/CarBrand.vue";
 import AddCarBrand from "../views/AddCarBrand.vue"
 import EditBrand from "../views/EditBrand.vue"
+import Book from "../views/Book/Book.vue";
+import AddBook from "../views/Book/AddBook.vue";
+import EditBook from "../views/Book/EditBook.vue";
 
 Vue.use(VueRouter);
 
@@ -33,6 +36,21 @@ const routes = [
     path: "/editBrand/:id",
     name: "EditBrand",
     component: EditBrand
+  },
+  {
+    path: "/Books",
+    name: "Books",
+    component: Book
+  },
+  {
+    path: "/addBook",
+    name: "AddBook",
+    component: AddBook
+  },
+  {
+    path: "/editBook/:id",
+    name: "EditBook",
+    component: EditBook
   }
 ];
 
