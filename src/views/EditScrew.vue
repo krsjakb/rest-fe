@@ -74,11 +74,12 @@ export default {
       this.axios
         .put("https://localhost:5001/api/ScrewModel/" + this.id, params)
         .then(() => {
-          alert("success");
+          alert("Sikeres mentés!");
           this.$router.push("/Screws");
         })
         .catch((err) => {
-          alert(err.message);
+          alert("Hiba történt!");
+          console.log(err);
         });
     },
   },

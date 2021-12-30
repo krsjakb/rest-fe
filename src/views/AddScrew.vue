@@ -52,11 +52,12 @@ export default {
       this.axios
         .post("https://localhost:5001/api/ScrewModel", params)
         .then(() => {
-          alert("success");
+          alert("Sikeres mentés!");
           this.$router.push("Screws");
         })
         .catch((err) => {
-          alert(err.message);
+          alert("Hiba történt!");
+          console.log(err);
         });
     },
   },

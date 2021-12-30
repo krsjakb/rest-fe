@@ -52,10 +52,11 @@ export default {
         .delete("https://localhost:5001/api/ScrewModel/" + id)
         .then(() => {
           this.updateList();
-          alert("success");
+          alert("Sikeres törlés!");
         })
         .catch((err) => {
-          alert(err.message);
+          alert("Hiba történt!");
+          console.log(err);
         });
     },
   },
