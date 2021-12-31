@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a href="addWhiskeyBrand">New brand</a>
+    <a href="addWhiskeyBrand">New whiskey brand</a>
     <b-list-group v-for="whiskeyBrand in whiskeyBrands" :key="whiskeyBrand.id">
       <b-list-group-item>
         Name: {{ whiskeyBrand.name }}
