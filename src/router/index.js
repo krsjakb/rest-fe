@@ -5,6 +5,11 @@ import About from "../views/About.vue";
 import CarBrand from "../views/CarBrand.vue";
 import AddCarBrand from "../views/AddCarBrand.vue"
 import EditBrand from "../views/EditBrand.vue"
+import GinBrand from "../views/GinBrand.vue";
+import EditGinBrand from "../views/EditGinBrand.vue"
+import AddGinBrand from "../views/AddGinBrand.vue"
+
+
 
 Vue.use(VueRouter);
 
@@ -33,8 +38,25 @@ const routes = [
     path: "/editBrand/:id",
     name: "EditBrand",
     component: EditBrand
+  },
+  {
+    path: "/ginBrands",
+    name: "GinBrands",
+    component: GinBrand
+  },
+  {
+    path: "/addGinBrand",
+    name: "AddGinBrand",
+    component: AddGinBrand
+  },
+  {
+    path: "/editGinBrand/:id",
+    name: "EditGinBrand",
+    component: EditGinBrand
   }
 ];
+
+
 
 const router = new VueRouter({
   mode: "history",
