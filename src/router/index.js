@@ -11,6 +11,12 @@ import Phone from "../views/Phone.vue";
 import USBConnector from "../views/USBConnector.vue";
 import AddUSBConnector from "../views/AddUSBConnector.vue";
 import EditUSBConnector from "../views/EditUSBConnector.vue";
+import PlugType from "../views/PlugType.vue";
+import AddPlugType from "../views/AddPlugType.vue";
+import EditPlugType from "../views/EditPlugType.vue";
+import PhoneUSBConnectors from "../views/PhoneUSBConnector.vue";
+import AddPhoneUSBConnector from "../views/AddPhoneUSBConnector.vue";
+import EditPhoneUSBConnector from "../views/EditPhoneUSBConnector.vue";
 
 Vue.use(VueRouter);
 
@@ -66,9 +72,39 @@ const routes = [
     component: AddUSBConnector
   },
   {
-    path: "/editusbconnector",
+    path: "/editusbconnector/:id",
     name: "EditUSBConnector",
     component: EditUSBConnector
+  },
+  {
+    path: "/PlugTypes",
+    name: "PlugTypes",
+    component: PlugType
+  },
+  {
+    path: "/addPlugType",
+    name: "AddPlugType",
+    component: AddPlugType
+  },
+  {
+    path: "/editPlugType/:id",
+    name: "EditPlugType",
+    component: EditPlugType
+  },
+  {
+    path: "/PhoneUSBConnectors",
+    name: "PhoneUSBConnectors",
+    component: PhoneUSBConnectors
+  },
+  {
+    path: "/addPhoneUSBConnector",
+    name: "AddPhoneUSBConnector",
+    component: AddPhoneUSBConnector
+  },
+  {
+    path: "/editPhoneUSBConnector/:id",
+    name: "EditPhoneUSBConnector",
+    component: EditPhoneUSBConnector
   }
 ];
 

@@ -5,17 +5,9 @@
       <b-form-input v-model="id_production" placeholder="Enter production id"></b-form-input>
       <b-form-input v-model="amperage" placeholder="Enter amperage (mA)"></b-form-input>
       <b-form-input v-model="voltage" placeholder="Enter voltage (mV)"></b-form-input>
-      
-      <select v-model="plugType">
-        <option disabled value="" selected>Please select a plug type</option>
-        <option value=0>Micro USB</option>
-        <option value=1>USB Type-C</option>
-        <option value=2>Lightning</option>
-      </select>
+      <b-form-input v-model="id_PlugType" placeholder="Enter plug type id"></b-form-input>
 
-      <b-button v-b-tooltip.hover title="Save" variant="light" @click="saveUSBConnector">
-        <b-icon icon="cloud-upload-fill" scale="1.5" variant="primary"></b-icon>
-      </b-button>
+      <b-button variant="success" @click="saveUSBConnector">Save</b-button>
     </b-card>
   </div>
 </template>
@@ -28,7 +20,7 @@ export default {
       id_production: "",
       amperage: null,
       voltage: null,
-      plugType: null
+      id_PlugType: null
     };
   },
   methods: {
@@ -38,7 +30,7 @@ export default {
         id_Production: this.id_production,
         amperage: this.amperage,
         voltage: this.voltage,
-        plugType: this.plugType
+        id_PlugType: this.id_PlugType
       }
 
       this.axios
@@ -52,6 +44,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-</style>
