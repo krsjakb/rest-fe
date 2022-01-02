@@ -5,6 +5,9 @@ import About from "../views/About.vue";
 import CarBrand from "../views/CarBrand.vue";
 import AddCarBrand from "../views/AddCarBrand.vue"
 import EditBrand from "../views/EditBrand.vue"
+import Weapons from "../views/Weapons.vue";
+import AddWeapons from "../views/AddWeapons.vue";
+import EditWeapons from "../views/EditWeapons.vue";
 
 Vue.use(VueRouter);
 
@@ -33,6 +36,21 @@ const routes = [
     path: "/editBrand/:id",
     name: "EditBrand",
     component: EditBrand
+  },
+  {
+    path: "/Weapons",
+    name: "Weapons",
+    component: Weapons
+  },
+  {
+    path: "/addWeapons",
+    name: "AddWeapons",
+    component: AddWeapons
+  },
+  {
+    path: "/editWeapons/:id",
+    name: "EditWeapon",
+    component: EditWeapons
   }
 ];
 
