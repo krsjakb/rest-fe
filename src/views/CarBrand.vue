@@ -20,7 +20,7 @@
 export default {
   data() {
     return {
-      carBrands: [],
+      carBrands: []
     };
   },
   created() {
@@ -28,14 +28,12 @@ export default {
   },
   methods: {
     updateList() {
-      this.axios
-        .get("https://localhost:5001/api/CarBrands")
-        .then((response) => {
-          this.carBrands = response.data;
-        });
+      this.axios.get("https://localhost:5001/api/CarBrands").then(response => {
+        this.carBrands = response.data;
+      });
     },
     editBrand(id) {
-      this.$router.push("editBrand/" + id)
+      this.$router.push("editBrand/" + id);
     },
     deleteBrand(id) {
       this.axios
@@ -47,10 +45,9 @@ export default {
         .catch(() => {
           alert("failed");
         });
-    },
-  },
+    }
+  }
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

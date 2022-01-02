@@ -3,8 +3,11 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import CarBrand from "../views/CarBrand.vue";
-import AddCarBrand from "../views/AddCarBrand.vue"
-import EditBrand from "../views/EditBrand.vue"
+import AddCarBrand from "../views/AddCarBrand.vue";
+import EditBrand from "../views/EditBrand.vue";
+import Beer from "../views/Beer.vue";
+import AddBeer from "../views/AddBeer.vue";
+import EditBeer from "../views/EditBeer.vue";
 
 Vue.use(VueRouter);
 
@@ -12,12 +15,12 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home,
+    component: Home
   },
   {
     path: "/about",
     name: "About",
-    component: About,
+    component: About
   },
   {
     path: "/carBrands",
@@ -33,13 +36,28 @@ const routes = [
     path: "/editBrand/:id",
     name: "EditBrand",
     component: EditBrand
+  },
+  {
+    path: "/beers",
+    name: "Beers",
+    component: Beer
+  },
+  {
+    path: "/addBeer",
+    name: "AddBeer",
+    component: AddBeer
+  },
+  {
+    path: "/editBeer/:id",
+    name: "EditBeer",
+    component: EditBeer
   }
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes,
+  routes
 });
 
 export default router;
