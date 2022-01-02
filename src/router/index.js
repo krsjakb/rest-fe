@@ -5,9 +5,9 @@ import About from "../views/About.vue";
 import CarBrand from "../views/CarBrand.vue";
 import AddCarBrand from "../views/AddCarBrand.vue"
 import EditBrand from "../views/EditBrand.vue"
-import JobAdvertisement from "../views/JobAdvertisement.vue"
-import AddJobAdvertisement from "../views/AddJobAdvertisement.vue"
-import EditJobAdvertisement from "../views/EditJobAdvertisement.vue"
+import Pizza from "../views/Pizza.vue"
+import AddPizza from "../views/AddPizza.vue"
+import EditPizza from "../views/EditPizza.vue"
 
 Vue.use(VueRouter);
 
@@ -38,19 +38,19 @@ const routes = [
     component: EditBrand
   },
   {
-    path: "/jobAdvertisements",
-    name: "JobAdvertisements",
-    component: JobAdvertisement
+    path: "/Pizzas",
+    name: "Pizzas",
+    component: Pizza
   },
   {
-    path: "/addJobAdvertisement",
-    name: "AddJobAdvertisement",
-    component: AddJobAdvertisement
+    path: "/addPizza",
+    name: "AddPizza",
+    component: AddPizza
   },
   {
-    path: "/editJobAdvertisement/:id",
-    name: "EditJobAdvertisement",
-    component: EditJobAdvertisement
+    path: "/editPizza/:id",
+    name: "EditPizza",
+    component: EditPizza
   }
 ];
 
