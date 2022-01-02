@@ -5,6 +5,9 @@ import About from "../views/About.vue";
 import CarBrand from "../views/CarBrand.vue";
 import AddCarBrand from "../views/AddCarBrand.vue"
 import EditBrand from "../views/EditBrand.vue"
+import BooksModels from "../views/BooksModels.vue"
+import AddBooksModels from "../views/AddBooksModels.vue"
+import EditBooksModels from "../views/EditBooksModels.vue"
 
 Vue.use(VueRouter);
 
@@ -33,7 +36,23 @@ const routes = [
     path: "/editBrand/:id",
     name: "EditBrand",
     component: EditBrand
+  },
+  {
+    path: "/BooksModels",
+    name: "BooksModels",
+    component: BooksModels
+  },
+  {
+    path: "/AddBooksModels",
+    name: "AddBooksModels",
+    component: AddBooksModels
+  },
+  {
+    path: "/EditBooksModels/:id",
+    name: "EditBooksModels",
+    component: EditBooksModels
   }
+
 ];
 
 const router = new VueRouter({
