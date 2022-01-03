@@ -1,11 +1,11 @@
 <template>
   <div>
-    <b-card :title="'Edit brand with id of ' + id">
+    <b-card :title="'Edit Random with id of ' + id">
       <b-form-input v-model="name" placeholder="Enter name"></b-form-input>
 
-      <b-form-input v-model="origin" placeholder="Enter origin"></b-form-input>
+      <b-form-input v-model="type" placeholder="Enter type"></b-form-input>
 
-      <b-button variant="success" @click="saveBrand">Save</b-button>
+      <b-button variant="success" @click="saveRandom">Save</b-button>
     </b-card>
   </div>
 </template>
@@ -16,38 +16,38 @@ export default {
     return {
       id: null,
       name: "",
-      origin: "",
+      type: ""
     };
   },
   created() {
     this.id = this.$route.params.id;
-    this.getBradById();
+    this.getRandomById();
   },
   methods: {
-    getBradById() {
+    getRandomById() {
       this.axios
-        .get("https://localhost:5001/api/CarBrands/" + this.id)
+        .get("https://localhost:5001/api/RandomModels/" + this.id)
         .then((response) => {
           console.log(response);
+          this.id = response.data.id;
           this.name = response.data.name;
-          this.origin = response.data.origin;
+          this.type = response.data.type;
         })
         .catch(() => {
           alert("failed");
         });
     },
-    saveBrand() {
+    saveRandom() {
       let params = {
         id: this.id,
         name: this.name,
-        origin: this.origin,
+        type: this.type
       };
-
       this.axios
-        .put("https://localhost:5001/api/CarBrands/" + this.id, params)
+        .put("https://localhost:5001/api/RandomModels/" + this.id, params)
         .then(() => {
           alert("success");
-          this.$router.push("/carBrands");
+          this.$router.push("/RandomModels");
         })
         .catch(() => {
           alert("failed");
