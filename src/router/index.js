@@ -3,11 +3,8 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import CarBrand from "../views/CarBrand.vue";
-import AddCarBrand from "../views/AddCarBrand.vue";
-import EditBrand from "../views/EditBrand.vue";
-import AddRandom from "../views/Random/AddRandom";
-import EditRandom from "../views/Random/EditRandom";
-import Random from "../views/Random/Random";
+import AddCarBrand from "../views/AddCarBrand.vue"
+import EditBrand from "../views/EditBrand.vue"
 
 Vue.use(VueRouter);
 
@@ -25,33 +22,18 @@ const routes = [
   {
     path: "/carBrands",
     name: "CarBrands",
-    component: CarBrand,
+    component: CarBrand
   },
   {
     path: "/addCarBrand",
     name: "AddCarBrand",
-    component: AddCarBrand,
+    component: AddCarBrand
   },
   {
     path: "/editBrand/:id",
     name: "EditBrand",
-    component: EditBrand,
-  },
-  {
-    path: "/randoms",
-    name: "Randoms",
-    component: Random,
-  },
-  {
-    path: "/editRandom/:id",
-    name: "EditRandom",
-    component: EditRandom,
-  },
-  {
-    path: "/addRandom",
-    name: "AddRandom",
-    component: AddRandom,
-  },
+    component: EditBrand
+  }
 ];
 
 const router = new VueRouter({

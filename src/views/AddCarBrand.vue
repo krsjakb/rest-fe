@@ -22,8 +22,8 @@ export default {
     saveBrand() {
       let params = {
         name: this.name,
-        origin: this.origin,
-      };
+        origin: this.origin
+      }
 
       this.axios
         .post("https://localhost:5001/api/CarBrands", params)
@@ -39,4 +39,5 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>

@@ -40,11 +40,12 @@ export default {
       let params = {
         id: this.id,
         name: this.name,
-        origin: this.origin,
-      };
+        origin: this.origin
+      }
 
       this.axios
-        .put("https://localhost:5001/api/CarBrands/" + this.id, params)
+        .put("https://localhost:5001/api/CarBrands/" + this.id,
+         params)
         .then(() => {
           alert("success");
           this.$router.push("/carBrands");
@@ -52,9 +53,10 @@ export default {
         .catch(() => {
           alert("failed");
         });
-    },
+    }
   },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>
