@@ -3,8 +3,11 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import CarBrand from "../views/CarBrand.vue";
-import AddCarBrand from "../views/AddCarBrand.vue"
-import EditBrand from "../views/EditBrand.vue"
+import AddCarBrand from "../views/AddCarBrand.vue";
+import EditBrand from "../views/EditBrand.vue";
+import SnippetStore from "../views/SnippetStore.vue";
+import AddSnippetStore from "../views/AddSnippetStore.vue";
+import EditSnippetStore from "../views/EditSnippetStore.vue";
 
 Vue.use(VueRouter);
 
@@ -33,7 +36,24 @@ const routes = [
     path: "/editBrand/:id",
     name: "EditBrand",
     component: EditBrand
+  },
+  {
+    path: "/SnippetStore",
+    name: "SnippetStore",
+    component: SnippetStore
+  },
+  {
+    path: "/AddSnippetStore",
+    name: "AddSnippetStore",
+    component: AddSnippetStore
+  },
+  {
+    path: "/EditSnippetStore/:id",
+    name: "EditSnippetStore",
+    component: EditSnippetStore
   }
+
+
 ];
 
 const router = new VueRouter({
