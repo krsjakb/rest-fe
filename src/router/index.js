@@ -2,9 +2,9 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
-import CarBrand from "../views/CarBrand.vue";
-import AddCarBrand from "../views/AddCarBrand.vue"
-import EditBrand from "../views/EditBrand.vue"
+import ScrewDriver from "../views/ScrewDriver.vue";
+import AddScrewDriver from "../views/AddScrewDriver.vue";
+import EditScrewDriver from "../views/ScrewDriver.vue";
 
 Vue.use(VueRouter);
 
@@ -20,19 +20,19 @@ const routes = [
     component: About,
   },
   {
-    path: "/carBrands",
-    name: "CarBrands",
-    component: CarBrand
+    path: "/screwDrivers",
+    name: "ScrewDrivers",
+    component: ScrewDriver
   },
   {
-    path: "/addCarBrand",
-    name: "AddCarBrand",
-    component: AddCarBrand
+    path: "/addScrewDriver",
+    name: "AddScrewDriver",
+    component: AddScrewDriver
   },
   {
-    path: "/editBrand/:id",
-    name: "EditBrand",
-    component: EditBrand
+    path: "/editScrewDriver/:id",
+    name: "EditScrewDriver",
+    component: EditScrewDriver
   }
 ];
 
