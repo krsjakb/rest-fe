@@ -4,7 +4,7 @@ import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import ScrewDriver from "../views/ScrewDriver.vue";
 import AddScrewDriver from "../views/AddScrewDriver.vue";
-import EditScrewDriver from "../views/ScrewDriver.vue";
+import EditScrewDriver from "../views/EditScrewDriver.vue";
 
 Vue.use(VueRouter);
 

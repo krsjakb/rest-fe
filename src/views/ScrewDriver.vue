@@ -3,8 +3,8 @@
     <a href="addScrewDriver">New Screwdriver</a>
     <b-list-group v-for="screwDriver in screwDrivers" :key="screwDriver.id">
       <b-list-group-item>
-        Brand Name: {{ screwDriver.brandname }}
-        Model Name: {{ screwDriver.modelname }}
+        Brand Name: {{ screwDriver.brandName }}
+        Model Name: {{ screwDriver.modelName }}
         <small class="text-secondary"> price: {{ screwDriver.price }} </small>
         <b-button variant="info" @click="editScrewDriver(screwDriver.id)" class="mr-2">
           Edit
@@ -30,7 +30,7 @@ export default {
   methods: {
     updateList() {
       this.axios
-        .get("https://localhost:5001/api/ScrewDrivers")
+        .get("https://localhost:5001/api/ScrewDriverModels")
         .then((response) => {
           this.screwDrivers = response.data;
         });
@@ -40,7 +40,7 @@ export default {
     },
     deleteScrewDriver(id) {
       this.axios
-        .delete("https://localhost:5001/api/ScrewDrivers/" + id)
+        .delete("https://localhost:5001/api/ScrewDriverModels/" + id)
         .then(() => {
           this.updateList();
           alert("success");

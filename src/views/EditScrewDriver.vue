@@ -1,9 +1,9 @@
 <template>
   <div>
     <b-card :title="'Edit screwdriver with id of ' + id">
-      <b-form-input v-model="brandname" placeholder="Enter brand name"></b-form-input>
+      <b-form-input v-model="brandName" placeholder="Enter brand name"></b-form-input>
 
-      <b-form-input v-model="modelname" placeholder="Enter model name"></b-form-input>
+      <b-form-input v-model="modelName" placeholder="Enter model name"></b-form-input>
 
       <b-form-input v-model="price" placeholder="Enter price"></b-form-input>
 
@@ -17,8 +17,8 @@ export default {
   data() {
     return {
       id: null,
-      brandname: "",
-      modelname: "",
+      brandName: "",
+      modelName: "",
       price: "",
     };
   },
@@ -29,11 +29,11 @@ export default {
   methods: {
     getScrewDriverById() {
       this.axios
-        .get("https://localhost:5001/api/ScrewDrivers/" + this.id)
+        .get("https://localhost:5001/api/ScrewDriverModels/" + this.id)
         .then((response) => {
           console.log(response);
-          this.brandname = response.data.brandname;
-          this.modelname = response.data.modelname;
+          this.brandName = response.data.brandName;
+          this.modelName = response.data.modelName;
           this.price = response.data.price;
         })
         .catch(() => {
@@ -43,13 +43,13 @@ export default {
     saveScrewDriver() {
       let params = {
         id: this.id,
-        brandname: this.brandname,
-        modelname: this.modelname,
+        brandName: this.brandName,
+        modelName: this.modelName,
         price: this.price
       }
 
       this.axios
-        .put("https://localhost:5001/api/ScrewDrivers/" + this.id,
+        .put("https://localhost:5001/api/ScrewDriverModels/" + this.id,
          params)
         .then(() => {
           alert("success");
