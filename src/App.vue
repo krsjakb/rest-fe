@@ -3,12 +3,11 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> | 
-<<<<<<< Updated upstream
+
       <router-link to="/carBrands">CarBrands</router-link>
-=======
       <router-link to="/carBrands">CarBrands</router-link> |
       <router-link to="/giftcards">Gift Card</router-link>
->>>>>>> Stashed changes
+
     </div>
     <router-view />
   </div>
