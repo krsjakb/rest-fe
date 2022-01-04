@@ -3,9 +3,11 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import CarBrand from "../views/CarBrand.vue";
-import AddCarBrand from "../views/AddCarBrand.vue"
-import EditBrand from "../views/EditBrand.vue"
-
+import AddCarBrand from "../views/AddCarBrand.vue";
+import EditBrand from "../views/EditBrand.vue";
+import Character from "../views/Character.vue";
+import AddSWChars from "../views/AddSWChars.vue";
+import EditSWChar from "../views/EditSWChar.vue"
 Vue.use(VueRouter);
 
 const routes = [
@@ -33,6 +35,21 @@ const routes = [
     path: "/editBrand/:id",
     name: "EditBrand",
     component: EditBrand
+  },
+  {
+    path: "/character",
+    name: "Character",
+    component: Character
+  },
+  {
+    path: "/addSWChars",
+    name: "AddSWChars",
+    component: AddSWChars
+  },
+  {
+    path: "/editSWChar",
+    name: "EditSWChar",
+    component: EditSWChar
   }
 ];
 
