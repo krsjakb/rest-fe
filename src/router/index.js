@@ -6,10 +6,13 @@ import CarBrand from "../views/CarBrand.vue";
 import AddCarBrand from "../views/AddCarBrand.vue"
 import EditBrand from "../views/EditBrand.vue"
 
+import Groups from "../views/Groups.vue"
+import AddGroups from "../views/AddGroups.vue"
+import EditGroups from "../views/EditGroups.vue"
+
 Vue.use(VueRouter);
 
-const routes = [
-  {
+const routes = [{
     path: "/",
     name: "Home",
     component: Home,
@@ -33,6 +36,21 @@ const routes = [
     path: "/editBrand/:id",
     name: "EditBrand",
     component: EditBrand
+  },
+  {
+    path: "/groups",
+    name: "Groups",
+    component: Groups
+  },
+  {
+    path: "/addGroup",
+    name: "AddGroup",
+    component: AddGroups
+  },
+  {
+    path: "/editGroup/:id",
+    name: "EditGroup",
+    component: EditGroups
   }
 ];
 
