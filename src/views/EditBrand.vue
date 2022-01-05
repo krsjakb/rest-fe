@@ -1,9 +1,9 @@
 <template>
   <div>
-    <b-card :title="'Edit brand with id of ' + id">
+    <b-card :title="'Edit model with id of ' + id">
       <b-form-input v-model="name" placeholder="Enter name"></b-form-input>
 
-      <b-form-input v-model="origin" placeholder="Enter origin"></b-form-input>
+      <b-form-input v-model="health" placeholder="Enter health"></b-form-input>
 
       <b-button variant="success" @click="saveBrand">Save</b-button>
     </b-card>
@@ -16,7 +16,7 @@ export default {
     return {
       id: null,
       name: "",
-      origin: "",
+      health: "",
     };
   },
   created() {
@@ -26,11 +26,11 @@ export default {
   methods: {
     getBradById() {
       this.axios
-        .get("https://localhost:5001/api/CarBrands/" + this.id)
+        .get("https://localhost:5001/api/ChampModels/" + this.id)
         .then((response) => {
           console.log(response);
           this.name = response.data.name;
-          this.origin = response.data.origin;
+          this.health = response.data.health;
         })
         .catch(() => {
           alert("failed");
@@ -40,11 +40,11 @@ export default {
       let params = {
         id: this.id,
         name: this.name,
-        origin: this.origin
+        health: this.health
       }
 
       this.axios
-        .put("https://localhost:5001/api/CarBrands/" + this.id,
+        .put("https://localhost:5001/api/ChampModels/" + this.id,
          params)
         .then(() => {
           alert("success");

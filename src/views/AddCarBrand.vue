@@ -1,9 +1,9 @@
 <template>
   <div>
-    <b-card title="Add car brand">
+    <b-card title="Add champ model">
       <b-form-input v-model="name" placeholder="Enter name"></b-form-input>
 
-      <b-form-input v-model="origin" placeholder="Enter origin"></b-form-input>
+      <b-form-input v-model="health" placeholder="Enter health"></b-form-input>
 
       <b-button variant="success" @click="saveBrand">Save</b-button>
     </b-card>
@@ -15,21 +15,21 @@ export default {
   data() {
     return {
       name: "",
-      origin: "",
+      health: "",
     };
   },
   methods: {
     saveBrand() {
       let params = {
         name: this.name,
-        origin: this.origin
+        health: this.health
       }
 
       this.axios
-        .post("https://localhost:5001/api/CarBrands", params)
+        .post("https://localhost:5001/api/ChampModels", params)
         .then(() => {
           alert("success");
-          this.$router.push("carBrands");
+          this.$router.push("champModels");
         })
         .catch(() => {
           alert("failed");
