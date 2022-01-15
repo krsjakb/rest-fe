@@ -3,11 +3,17 @@
     <b-card :title="'Edit brand with id of ' + id">
       <b-form-input v-model="name" placeholder="Enter name"></b-form-input>
 
-      <b-form-input v-model="manufacturer" placeholder="Enter manufacturer"></b-form-input>
-      
+      <b-form-input
+        v-model="manufacturer"
+        placeholder="Enter manufacturer"
+      ></b-form-input>
+
       <b-form-input v-model="color" placeholder="Enter color"></b-form-input>
 
-      <b-form-input v-model="compatibility" placeholder="Enter compatibility"></b-form-input>
+      <b-form-input
+        v-model="compatibility"
+        placeholder="Enter compatibility"
+      ></b-form-input>
 
       <b-button variant="success" @click="saveBrand">Save</b-button>
     </b-card>
@@ -27,10 +33,10 @@ export default {
   },
   created() {
     this.id = this.$route.params.id;
-    this.getBradById();
+    this.getKontrollerBrandById();
   },
   methods: {
-    getKontById() {
+    getKontrollerBrandById() {
       this.axios
         .get("https://localhost:5001/api/KontrollerBrands/" + this.id)
         .then((response) => {
@@ -51,11 +57,10 @@ export default {
         manufacturer: this.manufacturer,
         color: this.color,
         compatibility: this.compatibility,
-      }
+      };
 
       this.axios
-        .put("https://localhost:5001/api/KontrollerBrands/" + this.id,
-         params)
+        .put("https://localhost:5001/api/KontrollerBrands/" + this.id, params)
         .then(() => {
           alert("success");
           this.$router.push("/kontrollerBrands");
@@ -63,10 +68,9 @@ export default {
         .catch(() => {
           alert("failed");
         });
-    }
+    },
   },
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
