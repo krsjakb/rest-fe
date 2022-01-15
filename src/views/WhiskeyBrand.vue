@@ -35,7 +35,7 @@ export default {
         });
     },
     editBrand(id) {
-      this.$router.push("editBrand/" + id)
+      this.$router.push("editWhiskeyBrand/" + id)
     },
     deleteBrand(id) {
       this.axios
