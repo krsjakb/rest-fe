@@ -7,7 +7,7 @@ import AddCarBrand from "../views/AddCarBrand.vue";
 import EditBrand from "../views/EditBrand.vue";
 import Character from "../views/Character.vue";
 import AddSWChars from "../views/AddSWChars.vue";
-import EditSWChar from "../views/EditSWChar.vue"
+import EditSWChar from "../views/EditSWChar.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -24,33 +24,33 @@ const routes = [
   {
     path: "/carBrands",
     name: "CarBrands",
-    component: CarBrand
+    component: CarBrand,
   },
   {
     path: "/addCarBrand",
     name: "AddCarBrand",
-    component: AddCarBrand
+    component: AddCarBrand,
   },
   {
     path: "/editBrand/:id",
     name: "EditBrand",
-    component: EditBrand
+    component: EditBrand,
   },
   {
     path: "/character",
     name: "Character",
-    component: Character
+    component: Character,
   },
   {
     path: "/addSWChars",
     name: "AddSWChars",
-    component: AddSWChars
+    component: AddSWChars,
   },
   {
-    path: "/editSWChar",
+    path: "/editSWChar/:id",
     name: "EditSWChar",
-    component: EditSWChar
-  }
+    component: EditSWChar,
+  },
 ];
 
 const router = new VueRouter({

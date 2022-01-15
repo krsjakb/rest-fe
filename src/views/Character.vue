@@ -30,14 +30,12 @@ export default {
   },
   methods: {
     updateList() {
-      this.axios
-        .get("https://localhost:5001/api/SWChars")
-        .then((response) => {
-          this.SWchars = response.data;
-        });
+      this.axios.get("https://localhost:5001/api/SWChars").then((response) => {
+        this.SWchars = response.data;
+      });
     },
     editChar(id) {
-      this.$router.push("editChar/" + id)
+      this.$router.push("editSwChar/" + id);
     },
     deleteChar(id) {
       this.axios
@@ -54,5 +52,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

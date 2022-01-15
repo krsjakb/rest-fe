@@ -3,7 +3,10 @@
     <b-card title="Add Star Wars Character">
       <b-form-input v-model="name" placeholder="Enter name"></b-form-input>
 
-      <b-form-input v-model="faction" placeholder="Enter faction"></b-form-input>
+      <b-form-input
+        v-model="faction"
+        placeholder="Enter faction"
+      ></b-form-input>
 
       <b-form-input v-model="planet" placeholder="Enter planet"></b-form-input>
 
@@ -18,7 +21,7 @@ export default {
     return {
       name: "",
       faction: "",
-      planet:"",
+      planet: "",
     };
   },
   methods: {
@@ -26,14 +29,14 @@ export default {
       let params = {
         name: this.name,
         faction: this.faction,
-        planet: this.planet
-      }
+        planet: this.planet,
+      };
 
       this.axios
         .post("https://localhost:5001/api/SWChars", params)
         .then(() => {
           alert("success");
-          this.$router.push("SWchars");
+          this.$router.push("character");
         })
         .catch(() => {
           alert("failed");
@@ -43,5 +46,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
