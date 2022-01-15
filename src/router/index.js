@@ -5,8 +5,9 @@ import About from "../views/About.vue";
 import CarBrand from "../views/CarBrand.vue";
 import AddCarBrand from "../views/AddCarBrand.vue";
 import EditBrand from "../views/EditBrand.vue";
+import Laptop from "../views/Laptop.vue";
 import AddLaptop from "../views/AddLaptop.vue";
-import EditLaptop from "../views/EditLaptop.vue"
+import EditLaptop from "../views/EditLaptop.vue";
 
 Vue.use(VueRouter);
 
@@ -24,28 +25,33 @@ const routes = [
   {
     path: "/carBrands",
     name: "CarBrands",
-    component: CarBrand
+    component: CarBrand,
   },
   {
     path: "/addCarBrand",
     name: "AddCarBrand",
-    component: AddCarBrand
+    component: AddCarBrand,
   },
   {
     path: "/editBrand/:id",
     name: "EditBrand",
-    component: EditBrand
+    component: EditBrand,
+  },
+  {
+    path: "/laptops",
+    name: "Laptop",
+    component: Laptop,
   },
   {
     path: "/addLaptop",
     name: "AddLaptop",
-    component: AddLaptop
+    component: AddLaptop,
   },
   {
     path: "/editLaptop/:id",
     name: "EditLaptop",
-    component: EditLaptop
-  }
+    component: EditLaptop,
+  },
 ];
 
 const router = new VueRouter({

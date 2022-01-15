@@ -1,7 +1,10 @@
 <template>
   <div>
     <b-card title="Add laptop">
-      <b-form-input v-model="serialName" placeholder="Enter serial name"></b-form-input>
+      <b-form-input
+        v-model="serialName"
+        placeholder="Enter serial name"
+      ></b-form-input>
 
       <b-form-input v-model="brand" placeholder="Enter brand"></b-form-input>
 
@@ -22,14 +25,14 @@ export default {
     saveLaptop() {
       let params = {
         name: this.serialName,
-        origin: this.brand
-      }
+        origin: this.brand,
+      };
 
       this.axios
-        .post("https://localhost:5001/api/Laptop", params)
+        .post("https://localhost:5001/api/Laptops", params)
         .then(() => {
           alert("success");
-          this.$router.push("laptop");
+          this.$router.push("laptops");
         })
         .catch(() => {
           alert("failed");
@@ -39,5 +42,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

@@ -28,18 +28,16 @@ export default {
   },
   methods: {
     updateList() {
-      this.axios
-        .get("https://localhost:5001/api/Laptop")
-        .then((response) => {
-          this.laptop = response.data;
-        });
+      this.axios.get("https://localhost:5001/api/Laptops").then((response) => {
+        this.laptops = response.data;
+      });
     },
     editLaptop(id) {
-      this.$router.push("editLaptop/" + id)
+      this.$router.push("editLaptop/" + id);
     },
     deleteLaptop(id) {
       this.axios
-        .delete("https://localhost:5001/api/Laptop/" + id)
+        .delete("https://localhost:5001/api/Laptops/" + id)
         .then(() => {
           this.updateList();
           alert("success");
@@ -52,5 +50,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
