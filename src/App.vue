@@ -3,7 +3,11 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> | 
-      <router-link to="/carBrands">CarBrands</router-link>
+      <router-link to="/carBrands">CarBrands</router-link> |
+      <router-link to="/phones">Phones</router-link> |
+      <router-link to="/usbconnectors">USBConnectors</router-link> |
+      <router-link to="/PlugTypes">PlugTypes</router-link> |
+      <router-link to="/PhoneUSBConnectors">PhoneUSBConnector</router-link>
     </div>
     <router-view />
   </div>
