@@ -33,6 +33,21 @@ const routes = [
     path: "/editBrand/:id",
     name: "EditBrand",
     component: EditBrand
+  },
+  {
+    path: '/couches',
+    name: 'Couches',
+    component: Couch
+  },
+  {
+    path: '/addCouch',
+    name: 'AddCouch',
+    component: AddCouch
+  },
+  {
+    path: '/editCouch/:id',
+    name: 'EditCouch',
+    component: EditCouch
   }
 ];
 
